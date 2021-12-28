@@ -12,10 +12,9 @@
         </label>
         <ul class="header__menu">
           <li class="header__menuItem"><a href="">Developers</a></li>
-          <li class="header__menuItem"><a href="">Projects</a></li>
-          <li class="header__menuItem"><a href="">Inbox</a></li>
+          <li class="header__menuItem"><a href="{% url 'projects' %}">Projects</a></li>
+          <li class="header__menuItem"><a href="{% url 'create-project' %}">Add project</a></li>
           <li class="header__menuItem"><a href="">My Account</a></li>
-          <li class="header__menuItem"><a href="{% url 'create-project' %}" class="btn btn--sub">Add Project</a></li>
           <li class="header__menuItem"><a href="" class="btn btn--sub">Login/Sign Up</a></li>
         </ul>
       </nav>
