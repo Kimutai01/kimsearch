@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form>
+<form action="" method="POST">
     {% csrf_token %}
     <p>Are you sure you want to Delete "{{ object }}"?</p>
     <a href="{% url 'projects' %}">Go back
