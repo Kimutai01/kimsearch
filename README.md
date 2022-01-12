@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+A project that can connect developers where they can post there projects, like other peoples projects and also chat with them
 
 ## Built With
 
