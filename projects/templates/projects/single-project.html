@@ -42,7 +42,7 @@
           <div class="comments">
             <h3 class="singleProject__subtitle">Feedback</h3>
             <h5 class="project--rating">
-              36% Postitive Feedback (18 Votes)
+              {{project.vote_ratio}}% Postitive Feedback ({{project.vote_total}} Vote{{project.vote_total|pluralize:'s'}})
             </h5>
 
             <form class="form" action="#" method="POST">
