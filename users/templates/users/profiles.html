@@ -1,4 +1,5 @@
-{% extends 'main.html' %} {% block content %}
+{% extends 'main.html' %}
+ {% block content %}
 
 <main class="home">
   <section class="hero-section text-center">
@@ -48,13 +49,15 @@
               <p class="dev__info">
                 {{profile.bio|slice:"150"}}
               </p>
-              {% for tag in profiles.tags.all %}
+              {% for skill in profile.skill_set.all %}
               <div class="dev__skills">
                 <span class="tag tag--pill tag--main">
-                  <small>{{tag}}</small>
+                  <small>{{skill}}</small>
                 </span>
+              </div>
+                {% endfor %}
             </a>
-            {% endfor %}
+           
           </div>
         </div>
         {% endfor %}
