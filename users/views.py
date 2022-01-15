@@ -3,6 +3,9 @@ from .models import Profile
 
 # Create your views here.
 
+def loginPage(request):
+    return render(request,'users/login_registry.html')
+
 def profiles(request):
     profiles = Profile.objects.all()
     context = {'profiles':profiles}
@@ -16,3 +19,4 @@ def userProfile(request, pk):
     otherSkills = profile.skill_set.filter(description="")
     context = {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills}
     return render(request, 'users/user-profile.html', context)
+
