@@ -1,11 +1,12 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import login, authenticate,logout
+from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import Profile
 
 # Create your views here.
 
-def loginPage(request):
+def loginUser(request):
     
     if request.user.is_authenticated:
         return redirect('profiles')
@@ -17,7 +18,7 @@ def loginPage(request):
         try:
             user = User.objects.get(username=username)
         except:
-            print('username does not exist')
+            messages.error(request,'Username does not exist')
         user = authenticate(request, username=username, password = password)
         
         if user is not None:
@@ -25,10 +26,11 @@ def loginPage(request):
             return redirect('profiles')
         
         else:
-            print('Username or password incorrect')
+            messages.error(request,'Username or password incorrect')
     return render(request,'users/login_registry.html')
 
 def logoutUser(request):
+    messages.error(request,'User was successfuly logged out')
     return redirect('login')
 
 def profiles(request):
