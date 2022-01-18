@@ -33,7 +33,7 @@ def loginUser(request):
     return render(request,'users/login_registry.html')
 
 def logoutUser(request):
-    messages.error(request,'User was successfuly logged out')
+    messages.info(request,'User was successfuly logged out')
     return redirect('login')
 
 def registerUser(request):
