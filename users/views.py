@@ -98,3 +98,7 @@ def editAccount(request):
     context = {'form':form}
     return render(request, 'users/profile_form.html', context)
 
+
+def createSkill(request):
+    return render(request, 'users/skill_form.html')
+
