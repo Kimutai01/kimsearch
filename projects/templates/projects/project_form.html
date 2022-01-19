@@ -1,15 +1,13 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<h1>Project form</h1>
-
 <main class="formPage my-xl">
     <div class="content-box">
         <div class="formWrapper">
             <a class="backButton" href="#"><i class="im im-angle-left"></i></a>
             <br>
 
-            <form class="form" method="POST" enctype="multipart/form-data">
+            <form class="form" method="POST" action="" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                 <!-- Input:Text -->
